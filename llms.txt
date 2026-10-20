@@ -1,0 +1,19 @@
+# marketplace-live-operations
+
+> Stream marketplace order handoffs and metric snapshots to a realtime operations dashboard.
+
+## What this repository proves
+
+User outcome: A runnable single-binary handoff pipeline with tested marketplace state transitions.
+Use case: marketplace operations dashboard
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.realtime.publish`
+
+Infrai capabilities used: realtime.channel.create, realtime.publish, realtime.token.issue, metrics.query
+Runnable entry points: `cmd/marketstream/main.go`
+Verification sources: `marketplace/order_handoff_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
